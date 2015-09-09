@@ -5,30 +5,33 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
+
+
+
   <!-- Dashboard Tab -->
-  <ion-tab title="My place" icon="ion-ios-list-outline" href="#/myplace">
+  <ion-tab title="My place" icon="ion-ios-list-outline" ui-sref="tab.myplace">
     <ion-nav-view name="tab-myplace"></ion-nav-view>
   </ion-tab>
 
   <!-- Dashboard Tab -->
-  <ion-tab title="Add place"icon="ion-ios-plus" href="#/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
+  <ion-tab title="Add place"icon="ion-ios-plus" ui-sref="tab.addplace">
+    <ion-nav-view name="tab-addplace"></ion-nav-view>
   </ion-tab>
 
 
   <!-- Dashboard Tab -->
-  <ion-tab title="Around me"icon="ion-ios-pulse-strong" href="#/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
+  <ion-tab title="Around me"icon="ion-ios-pulse-strong" ui-sref="tab.aroundme">
+    <ion-nav-view name="tab-aroundme"></ion-nav-view>
   </ion-tab>
 
   <!-- Chats Tab -->
-  <ion-tab title="Friends"icon="ion-ios-people" href="#/chats">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
+  <ion-tab title="Friends"icon="ion-ios-people" ui-sref="tab.friends">
+    <ion-nav-view name="tab-friends"></ion-nav-view>
   </ion-tab>
 
   <!-- Account Tab -->
-  <ion-tab title="More" icon="ion-more" href="#/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
+  <ion-tab title="More" icon="ion-more" ui-sref="tab.more">
+    <ion-nav-view name="tab-more"></ion-nav-view>
   </ion-tab>
 
 

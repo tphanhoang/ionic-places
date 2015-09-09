@@ -10,50 +10,53 @@ angular.module('places')
 
 		  // Each tab has its own nav history stack:
 
-		  .state('tab.dash', {
-		    url: '^/dash',
-		    views: {
-		      'tab-dash': {
-		        templateUrl: 'src/tab/views/tab-dash.html',
-		        controller: 'DashCtrl'
-		      }
-		    }
-		  })
-
 		  .state('tab.myplace', {
 		    url: '^/myplace',
+		    data: { pageTitle : 'my Place'},
 		    views: {
 		      'tab-myplace': {
-		        templateUrl: 'src/tab/views/tab-myplace.html',
-		        controller: 'DashCtrl'
+		        templateUrl: 'src/tab/views/tab-myplace.html'
 		      }
 		    }
 		  })
 
-		  .state('tab.chats', {
-		      url: '^/chats',
+		  .state('tab.addplace', {
+		    url: '^/addplace',
+		    data: { pageTitle : 'add Place'},
+		    views: {
+		      'tab-addplace': {
+		        templateUrl: 'src/tab/views/tab-addplace.html'
+		      }
+		    }
+		  })
+
+		  .state('tab.aroundme', {
+		      url: '^/aroundme',
+		    data: { pageTitle : 'Around Me'},
 		      views: {
-		        'tab-chats': {
-		          templateUrl: 'src/tab/views/tab-chats.html',
+		        'tab-aroundme': {
+		          templateUrl: 'src/tab/views/tab-aroundme.html',
 		          controller: 'ChatsCtrl'
 		        }
 		      }
 		    })
-		    .state('tab.chat-detail', {
-		      url: '^/chats/:chatId',
+		    .state('tab.friends', {
+		      url: '^/friends/:chatId',
+		      data: { pageTitle : 'my friends'},
 		      views: {
 		        'tab-chats': {
-		          templateUrl: 'src/tab/views/chat-detail.html',
-		          controller: 'ChatDetailCtrl'
+		          templateUrl: 'src/tab/views/tab-friends.html',
+		          controller: 'ChatsCtrl'
 		        }
 		      }
 		    })
 
-		  .state('tab.account', {
-		    url: '/account',
+		  .state('tab.more', {
+		    url: '/more',
+		    data: { pageTitle : 'More'},
 		    views: {
 		      'tab-account': {
-		        templateUrl: 'src/tab/views/tab-account.html',
+		        templateUrl: 'src/tab/views/tab-more.html',
 		        controller: 'AccountCtrl'
 		      }
 		    }
@@ -61,7 +64,6 @@ angular.module('places')
 	})
 
 
-	.controller('DashCtrl', function($scope) {})
 
 	.controller('ChatsCtrl', function($scope, Chats) {
 	  // With the new view caching in Ionic, Controllers are only called

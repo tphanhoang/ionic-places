@@ -21,10 +21,15 @@
     <!-- your app's js -->
     <script src="src/app.js"></script>
       <script src="src/tab/tab.js"></script>
+      <script src="src/header/header.js"></script>
       <script src="src/login/login.js"></script>
 
   </head>
   <body ng-app="places">
+
+  <ng-include src="'src/header/header.html'" ng-controller="HeaderCtrl as header"></ng-include>
+
+
     <!--
       The views will be rendered in the <ion-nav-view> directive below
       Templates are in the /templates folder (but you could also
