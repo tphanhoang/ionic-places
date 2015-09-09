@@ -1,17 +1,28 @@
 angular.module('places')
 
-	.controller('HeaderCtrl', function($rootScope, $scope, $state) {
+	.controller('HeaderCtrl', function($scope, $rootScope, $state) {
 	  
+		
 		var vm = this;
+		_isEnabled();
+		_titlePage();
 
 	  $rootScope.$on('$stateChangeSuccess',
 function(event, toState, toParams, fromState, fromParams){
 		
-		vm.pageTitle = toState.data != null ? toState.data.pageTitle  : null;
-		vm.enabled = $state.is('login');
+		_titlePage();
+		_isEnabled();		
 
 }
 	  	)
+	  
+
+	  function _isEnabled(){
+	  	vm.enabled = $state.is('login');
+	  }
+	  function _titlePage(){
+	  	vm.pageTitle = $state.current.data != null ? $state.current.data.pageTitle  : null;
+	  }
 	  
 
 	})

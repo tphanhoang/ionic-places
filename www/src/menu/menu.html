@@ -1,0 +1,21 @@
+<ion-side-menus>
+  <!-- Left menu -->
+  <ion-side-menu side="left">
+ 	
+  <div class="item item-avatar">
+    <img src="https://res.cloudinary.com/opera-national-de-paris/image/upload/c_crop%2ch_1405%2cw_2500%2cx_0%2cy_0/h_320%2cw_570/f_auto/v1/user_photos/gx6rplxvumqkt0rlf5ld">
+    <h2>HelloOOooOH</h2>
+    <p>BOOOM</p>
+  </div>
+
+  <div class="padding">
+    <button class="button button-block icon-left ion-log-out button-positive" ui-sref="login">Log out</button>   			
+  </div>
+  </ion-side-menu>
+
+  <ion-side-menu-content>
+  			<ng-include src="'src/header/header.html'" ng-controller="HeaderCtrl as header"></ng-include>
+    		<ng-include src="'src/tab/tabs.html'"></ng-include>
+  </ion-side-menu-content>
+
+</ion-side-menus>

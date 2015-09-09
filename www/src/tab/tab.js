@@ -5,7 +5,7 @@ angular.module('places')
 		  .state('tab',{
 			url: '/tab',
 		    abstract: true,
-		    templateUrl: 'src/tab/tabs.html'
+		    templateUrl: 'src/menu/menu.html'
 		  })
 
 		  // Each tab has its own nav history stack:
@@ -15,7 +15,8 @@ angular.module('places')
 		    data: { pageTitle : 'my Place'},
 		    views: {
 		      'tab-myplace': {
-		        templateUrl: 'src/tab/views/tab-myplace.html'
+		        templateUrl: 'src/tab/views/tab-myplace.html',
+          controller: 'ChatsCtrl'
 		      }
 		    }
 		  })
@@ -62,6 +63,7 @@ angular.module('places')
 		    }
 		  })		
 	})
+
 
 
 
