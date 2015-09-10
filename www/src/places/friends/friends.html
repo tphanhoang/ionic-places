@@ -1,5 +1,20 @@
 <ion-view>
-  <ion-content class="has-header">
-    Friends
+  <ion-content class="has-header" ng-controller="FriendsCtrl as friend">
+    
+		<ion-list>		
+		
+
+		  <div ng-repeat="(friend, truc) in friend.friendList">
+		  <div class="item item-divider">{{friend}}</div>
+		  	<ion-item  ng-repeat="(key, value) in truc">
+		  		{{value.name}}
+
+		  		
+		  	</ion-item >		   
+		  </div>
+
+
+		</ion-list>
+    
   </ion-content>
 </ion-view>
