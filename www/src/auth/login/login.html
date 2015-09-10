@@ -1,0 +1,26 @@
+<ion-view class="row row-no-padding">
+        <div class="col col-center">
+            <div class="logo">
+                <i class="icon ion-ios-location"></i>
+            </div>
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" placeholder="Email" ng-model="email">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Password" ng-model="password">
+                </label>
+            </div>
+            <div class="padding-left padding-right">
+                <button class="button button-block button-positive" ng-click="login(name,mdp)">Sign in</button>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button class="button button-outline button-positive btn-mini" ng-click="openSignUp()">
+                        Sign up
+                    </button>
+                </div>
+            </div>
+
+        </div>
+</ion-view>

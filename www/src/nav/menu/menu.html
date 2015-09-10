@@ -7,14 +7,14 @@
             <h2>Hello Ionic</h2>
             <p>Ready to be an hybrid developer with Cordova/Ionic/Angular ?</p>
         </a>
-        <div class="padding">
-            <button class="button button-block button-assertive" ui-sref="login" menu-toggle="right">Logout</button>
+        <div class="padding" ng-controller="LoginCtrl">
+            <button class="button button-block button-assertive" ui-sref="login" menu-toggle="right" ng-click="logout()">Logout</button>
         </div>
     </ion-side-menu>
 
     <!-- Center content -->
     <ion-side-menu-content>
         <ng-include src="'src/nav/header/header.html'" ng-controller="HeaderCtrl"></ng-include>
-        <ng-include src="'src/nav/tabs/tabs.html'"></ng-include>
+        <ng-include src="'src/nav/tabs/tabs.html'" ng-controller="TabsCtrl"></ng-include>
     </ion-side-menu-content>
 </ion-side-menus>

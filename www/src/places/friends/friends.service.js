@@ -1,8 +1,10 @@
-angular.module('places').factory("FriendsService", function ($http, $q) {
+
+angular.module('places').factory("FriendsService", function ($http, $q,$filter) {
 
 	return {
 
 		getGroupedFriends: function () {
+
 
 			var defer = $q.defer();
 			this.getFriends().then(function(result){

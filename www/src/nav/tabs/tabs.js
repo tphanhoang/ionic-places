@@ -40,7 +40,8 @@ angular.module('places')
 				},
 				views: {
 					'tab-around-me': {
-						templateUrl: 'src/places/around/around-me.html'
+						templateUrl: 'src/places/around/around-me.html',
+						controller:'AroundMeCtrl'
 					}
 				}
 			})
@@ -51,7 +52,8 @@ angular.module('places')
 				},
 				views: {
 					'tab-friends': {
-						templateUrl: 'src/places/friends/friends.html'
+						templateUrl: 'src/places/friends/friends.html',
+						controller:'FriendsCtrl'
 					}
 				}
 			});
